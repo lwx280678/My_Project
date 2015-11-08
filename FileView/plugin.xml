@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="fileview.Application">
+         </run>
+      </application>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="RCP Perspective"
+            class="com.huawei.netlab.perspectives.Perspective"
+            id="com.huawei.netlab.perspectives.Perspective">
+      </perspective>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="Designer"
+            class="com.huawei.netlab.perspectives.DesignerPerspective"
+            id="com.huawei.netlab.perspectives.DesignerPerspective">
+      </perspective>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="Networker"
+            class="com.huawei.netlab.perspectives.NetWorkerPerspective"
+            id="com.huawei.netlab.perspectives.NetWorkerPerspective">
+      </perspective>
+   </extension>
+
+	<extension
+         point="org.eclipse.ui.views">
+      <view
+            name="File View"
+            allowMultiple="true"
+            icon="icons/home.gif"
+            class="com.huawei.netlab.ui.views.FileView"
+            id="com.huawei.netlab.ui.views.FileView">
+      </view>
+   </extension>
+	<extension
+         point="org.eclipse.ui.views">
+      <view
+            name="Table View"
+            allowMultiple="true"
+            class="com.huawei.netlab.ui.views.TableView"
+            id="com.huawei.netlab.ui.views.TableView">
+      </view>
+   </extension>
+</plugin>

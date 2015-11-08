@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="lib" path="H:/学习资料/JAVA/java高级资料/武汉高级老师课件/Spring/第七章 Spring、Struts2和Hibernate整合/案例/S2SH/WebRoot/WEB-INF/lib/mysql-connector-java-5.1.15-bin.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: FileView
+Bundle-SymbolicName: FileView; singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: fileview.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.gef;bundle-version="3.5.1"
+Bundle-ActivationPolicy: lazy

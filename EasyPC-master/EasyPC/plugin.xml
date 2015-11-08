@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="cn.liushaofeng.easypc.app.Application">
+         </run>
+      </application>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="Simple User"
+            class="cn.liushaofeng.easypc.perspectives.SimplePerspective"
+            id="cn.liushaofeng.easypc.perspecties.simpleperspective">
+      </perspective>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="Designer"
+            class="cn.liushaofeng.easypc.perspectives.DesignerPerspective"
+            id="cn.liushaofeng.easypc.perspecties.designerperspective">
+      </perspective>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="Networker"
+            class="cn.liushaofeng.easypc.perspectives.NetWorkerPerspective"
+            id="cn.liushaofeng.easypc.perspecties.networkerperspective">
+      </perspective>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            name="File Explorer"
+            allowMultiple="true"
+            icon="icons/home.gif"
+            class="cn.liushaofeng.easypc.views.FileExplorerView"
+            id="cn.liushaofeng.easypc.views.fileexplorerview">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            name="Contact"
+            allowMultiple="true"
+            icon="icons/contact.gif"
+            class="cn.liushaofeng.easypc.views.ContactView"
+            id="cn.liushaofeng.easypc.views.contactview">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            name="Process"
+            allowMultiple="true"
+            icon="icons/contact.gif"
+            class="cn.liushaofeng.easypc.views.ProcessView"
+            id="cn.liushaofeng.easypc.views.processview">
+      </view>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            name="Software infomation"
+            allowMultiple="true"
+            icon="icons/contact.gif"
+            class="cn.liushaofeng.easypc.views.SoftwareInfoView"
+            id="cn.liushaofeng.easypc.views.softwareinfoview">
+      </view>
+   </extension>
+   
+    <extension
+         point="org.eclipse.ui.views">
+      <view
+            name="Hardware infomation"
+            allowMultiple="true"
+            icon="icons/contact.gif"
+            class="cn.liushaofeng.easypc.views.HardwareInfoView"
+            id="cn.liushaofeng.easypc.views.hardwareinfoview">
+      </view>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            name="Console"
+            allowMultiple="true"
+            icon="icons/console.gif"
+            class="cn.liushaofeng.easypc.views.ConsoleView"
+            id="cn.liushaofeng.easypc.views.consoleview">
+      </view>
+   </extension>
+   
+   
+ 	<extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="cn.liushaofeng.easypc.editors.TextEditor"
+            contributorClass="cn.liushaofeng.easypc.editors.contributors.TextEditorContributor"
+            default="false"
+            icon="icons/obj_text.gif"
+            id="cn.liushaofeng.easypc.editors.texteditorview"
+            name="Text Editor">
+      </editor>
+   	</extension>
+   
+   
+   
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            name="Mail"
+            id="EasyPC.category">
+      </category>
+      <command
+            name="Open Mailbox"
+            description="Opens a mailbox"
+            categoryId="EasyPC.category"
+            id="EasyPC.open">
+      </command>
+      <command
+            name="Open Message Dialog"
+            description="Open a message dialog"
+            categoryId="EasyPC.category"
+            id="EasyPC.openMessage">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="EasyPC.open"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="CTRL+SHIFT+O">
+      </key>
+      <key
+            commandId="EasyPC.openMessage"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="CTRL+SHIFT+M">
+      </key>
+      <key
+            commandId="org.eclipse.ui.file.exit"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="CTRL+SHIFT+Q">
+      </key>
+   </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="EasyPC.application"
+            name="Easy PC">
+         <property
+               name="aboutText"
+               value="%aboutText">
+         </property>
+         <property
+               name="windowImages"
+               value="icons/EasyPC_16x16.gif">
+         </property>
+         <property
+               name="aboutImage"
+               value="icons/product_lg.gif">
+         </property>
+         <property
+               name="appName"
+               value="Easy PC">
+         </property>
+      </product>
+   </extension>
+  
+
+</plugin>
